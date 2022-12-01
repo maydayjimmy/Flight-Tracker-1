@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" /> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&family=Source+Sans+Pro&display=swap">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,14 +13,22 @@
 <body>
 <h1>Flights</h1>
 <main>
-    <h3>Departure Airport </h3>
-    <p id="dpt"></p>
-    <h3>Arrival Airport </h3>
-    <p id="arr"></p>
+
     <form>
-        <input type="text" placeholder="Flight Number"/>
-        <input type="submit" value="Check Flight" />
+        <input id="airline" type="text" placeholder="Airline"/>
+        <input id="fltnum" type="text" placeholder="Flight Number"/>
+        <input type="submit" value="Check Flight Status" />
     </form>
+
+    <div>
+    <h3 class = "inline">Departure Airport: </h3>
+    <p class = "inline" id="dpt"></p>
+    </div>
+
+    <div>
+    <h3 class = "inline">Arrival Airport: </h3>
+    <p class = "inline" id="arr"></p>
+    </div>
 
     <div></div>
 </main>
