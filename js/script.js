@@ -12,6 +12,8 @@ const key = "&api_key=5e9bcac9-4573-44c1-892a-cd7da4fae82d"; // API Key
 
 
 // Cache DOM Element Reference ---------------------------------------------
+const $logo = $('#logo')
+
 const $flight = $('#flight')
 const $fltcode = $('#fltcode')
 const $status = $('#status')
@@ -42,8 +44,6 @@ const $heading = $('#heading')
 const $form = $('form') // Form is a section with the input boxes
 const $airline = $('#airline')
 const $fltnum = $('#fltnum')
-
-const $content = $(".content")
 
 // Register Event Listeners ---------------------------------------------
 $form.on("submit", createURL)
@@ -102,12 +102,14 @@ $form.on("submit", createURL)
             console.log("error")
 
             $flight.text("Flight Not Found")
+            $(logo).attr("src", "./pics/default.png");
             $fltcode.text("")
             $status.text("-")
+            $date.text("-")
             $dptapt.text("-")
             $arrapt.text("")
             $dptgate.text("-")
-            $dptgate.text("-")
+            $arrgate.text("-")
             $schdpt.text("-")
             $scharr.text("-")
             $accdpt.text("-")
@@ -125,7 +127,53 @@ $form.on("submit", createURL)
         // Display flight information
             console.log("ajax is working")
 
+            $calculated.text("")
+
             // Flight Info ------------------
+
+            // show airline logo
+            
+            switch (data.response.airline_iata) {
+                case "AA":
+                    $(logo).attr("src", "./pics/aa.png");
+                    break;      
+                case "B6":
+                    $(logo).attr("src", "./pics/b6.png");
+                    break;      
+                case "DL":
+                    $(logo).attr("src", "./pics/dl.jpg");
+                    break;      
+                case "UA":
+                    $(logo).attr("src", "./pics/ua.png");
+                    break;      
+                case "WN":
+                    $(logo).attr("src", "./pics/wn.png");
+                    break;
+                case "AS":
+                    $(logo).attr("src", "./pics/as.webp");
+                    break;
+                case "AC":
+                    $(logo).attr("src", "./pics/ac.png");
+                    break;
+                case "NK":
+                    $(logo).attr("src", "./pics/nk.png");
+                    break;
+                case "BA":
+                    $(logo).attr("src", "./pics/ba.svg");
+                    break;
+                case "LH":
+                    $(logo).attr("src", "./pics/lh.png");
+                    break;
+                case "AF":
+                    $(logo).attr("src", "./pics/af.png");
+                    break;
+                case "KL":
+                    $(logo).attr("src", "./pics/kl.png");
+                    break;
+                default: 
+                    $(logo).attr("src", "./pics/default.png");
+                // Need to code for flight not found, and airline logo does not exist
+            }
 
             // show airline name and flight number
             $flight.text(data.response.airline_name + " " + data.response.flight_number)

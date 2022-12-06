@@ -11,27 +11,30 @@
     <title>Flight App</title>
 </head>
 <body>
-<h1>Flights - can only show sched/enroute flights, no arrivals yet</h1>
-<!-- need to use /routes instead of /flight to display arrived flights  -->
-<main>
-
+<header>
+    <h1>Global Flight Tracker <img class="inline" id="radar" src="./pics/radar.svg" height="75"></h1>
+    <!-- need to use /routes instead of /flight to display arrived flights  -->
+</header>
+<aside>
     <form>
-        <input id="airline" type="text" placeholder="Airline"/>
+        <input id="airline" type="text" placeholder="Airline IATA Code"/>
         <input id="fltnum" type="text" placeholder="Flight Number"/>
-        <input type="submit" value="Check Flight Status" />
+        <!-- <input id="submit" type="submit" value="Check Flight Status"/> -->
+        <button id="submit">Check Flight Status</button>
     </form>
-
+</aside>
+<main>
     <div class = "content">
 
     <div>
-        <h3 class="inline" id="flight">American Airlines 142</h3> <!-- append airline_name with flight_number-->
-        <img class="inline" src="./pics/aa.png" alt="american airlines" height="75">
-        <h3 id="fltcode">(AAL142/AA142)</h3> <!-- Append flight_icao with flight_iata -->
+        <h3 class="inline" id="flight"></h3> <!-- append airline_name with flight_number-->
+        <img class="inline" id="logo" src="" height="75">
+        <h3 id="fltcode"></h3> <!-- Append flight_icao with flight_iata -->
     </div>
 
     <div>
         <h3 class = "inline">Status: </h3>
-        <p class = "inline" id="status">En-Route</p>
+        <p class = "inline" id="status">-</p>
     </div>
 
     <div>
@@ -41,8 +44,8 @@
 
     <div>
         <h3 class = "inline">Route: </h3>
-        <p class = "inline" id="dptapt">Los Angeles International</p>
-        <p class = "inline" id="arrapt">- London Heathrow</p>
+        <p class = "inline" id="dptapt">-</p>
+        <p class = "inline" id="arrapt"></p>
 
     <div>
         <h3 class = "inline">Departure Gate: </h3>
