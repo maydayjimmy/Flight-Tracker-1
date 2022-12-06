@@ -21,6 +21,8 @@
         <input type="submit" value="Check Flight Status" />
     </form>
 
+    <div class = "content">
+
     <div>
         <h3 class="inline" id="flight">American Airlines 142</h3> <!-- append airline_name with flight_number-->
         <img class="inline" src="./pics/aa.png" alt="american airlines" height="75">
@@ -33,15 +35,20 @@
     </div>
 
     <div>
+        <h3 class = "inline">Date: </h3>
+        <p class = "inline" id="date">-</p>
+    </div>
+
+    <div>
         <h3 class = "inline">Route: </h3>
         <p class = "inline" id="dptapt">Los Angeles International</p>
         <p class = "inline" id="arrapt">- London Heathrow</p>
 
     <div>
         <h3 class = "inline">Departure Gate: </h3>
-        <p class = "inline" id="dptgate">H5 Terminal 5</p>
+        <p class = "inline" id="dptgate">-</p>
         <h3 class = "inline">Arrival Gate: </h3>
-        <p class = "inline" id="arrgate">N35 Terminal 8</p>
+        <p class = "inline" id="arrgate">-</p>
     </div>
 
 
@@ -58,29 +65,25 @@
         <tbody>
             <tr>
                 <td>Scheduled</td>
-                <td id = "schdpt">3:00 PM</td>
-                <td id = "scharr">5:00 PM</td>
+                <td id = "schdpt">-</td>
+                <td id = "scharr">-</td>
             </tr>
             <tr>
                 <!-- Use some colors/symbols here for delays etc.-->
                 <td>Actual</td>
-                <td id = "accdpt">3:15 PM</td> <!-- Actual Dpt -->
+                <td id = "accdpt">-</td> <!-- Actual Dpt -->
                 <td id = "accarr">-</td> <!-- Actual Arr-->
             </tr>
             <tr>
                 <!-- Use some colors/symbols here for delays etc.-->
                 <td>Estimated</td>
-                <td id = "estdpt">3:15 PM</td> <!-- Est Dpt = Actual Dpt-->
-                <td id = "estarr">5:15 PM</td> <!-- Est Arr = Actual Arr-->
-                <td id = "calculated">(15 minutes late)</td> <!-- This variable needs to be calculated-->
+                <td id = "estdpt">-</td> <!-- Est Dpt = Actual Dpt-->
+                <td id = "estarr">-</td> <!-- Est Arr = Actual Arr-->
+                <td id = "calculated"></td> <!-- This variable needs to be calculated-->
             </tr>
         </tbody>
         <tfoot>
-            <tr>
-                <td colspan="4"><em>Notes</em>
-                    *this aircraft is late
-                </td>
-            </tr>
+
         </tfoot>
     </table>
 
@@ -91,29 +94,28 @@
         <thead>
             <tr>
                 <th>Aircraft Type</th>
-                <td id = "aircraft">Boeing 777-200 pax</td>
+                <td id = "aircraft">-</td>
                 <th></th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>Current Speed</td>
-                <td id = "speed">981 kph</td> <!-- append kph -->
+                <td id = "speed">-</td> <!-- append kph -->
             </tr>
             <tr>
                 <td>Current Altitude</td>
-                <td id = "altitude">11887 ft</td> <!-- append ft -->
+                <td id = "altitude">-</td> <!-- append ft -->
             </tr>
             <tr>
                 <td>Current Heading</td>
-                <td id = "heading">64 deg</td> <!-- append deg -->
+                <td id = "heading">-</td> <!-- append deg -->
             </tr>
         </tbody>
     </table>
 
+    </div>
 
-    
-    <div></div>
 </main>
 </body>
 </html>
