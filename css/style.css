@@ -2,37 +2,69 @@
     display: inline;
 }
 
-/* .times, table, th, td{
+#radar{
+    margin-top: 10px;
+}
+
+#logo{
+    height: 75px;
+}
+
+#flight{
+    position: relative;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* Tables --- */
+
+#title{
     border: 1px solid black;
+    background-color: rgb(241,241,241);
     border-collapse: collapse;
-} */
+}
+
+#side{
+    background-color: rgb(241,241,241);
+    border-collapse: collapse;
+}
+
+table {
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+
+/* ----- */
 
 body {
     height: 100vh;
     margin: 0;
-    font-family: sans-serif;
     display: grid;
     /* mobile first - single column */
+    font-family: sans-serif;
     grid-template-columns: 1fr;
-    grid-template-rows: auto 100px 700px;
+    grid-template-rows: 150px 80px 600px;
     grid-template-areas: 
       "head"
       "search"
       "info";
+    background-color: rgb(250,250,250);
 }
 
 header{
     grid-area: head;
-    background-color: rgb(0, 200,246);
+    background-color: black;
     text-align: center;
+    font-family: 'Courier New', Courier, monospace;
 }
   
 aside{
     grid-area: search;
-    background-color: rgb(241,241,241);
+    background-color: rgb(230,230,240);
     text-align: center;
 
-    border:2px solid rgb(0, 200,246);
     color: #A8D293;
     text-align: center;
     font-size: 12px;
@@ -42,22 +74,46 @@ aside{
 
 main{
     grid-area: info;
-    background-color: white;
+    background-color: rgb(250,250,250);
     text-align: center;
+    margin-top: 40px;
+}
+
+/*----------------------*/
+
+div.status{
+    margin-bottom: 10px;
+}
+
+div.date{
+    margin-bottom: 10px;
+}
+
+div.route{
+    margin-bottom: 10px;
+}
+
+div.gate{
+    margin-top: 10px;
+}
+
+#header{
+    color: white;
 }
 
 input{
-    border:2px solid rgb(0, 200,246);
+    border:2px solid black;
     width: 30%;
     padding: 5px 5px; 
     line-height: 20px;
 }
 
 button{
-    border:2px solid rgb(0, 200,246);
+    border:2px solid black;
     width: 30%;
     padding: 5px 5px; 
     line-height: 20px;
+    font-family: sans-serif;
 }
 
 /* Change the color of submit on hover */

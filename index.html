@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" type="text/css" href="./css/style.css" /> 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&family=Source+Sans+Pro&display=swap">
+    <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Merriweather:ital,wght@1,700&family=Source+Sans+Pro&display=swap">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -12,7 +13,7 @@
 </head>
 <body>
 <header>
-    <h1>Global Flight Tracker <img class="inline" id="radar" src="./pics/radar.svg" height="75"></h1>
+    <h1 id="header">Global Flight Tracker <img class="inline" id="radar" src="./pics/radar.svg" height="75"></h1>
     <!-- need to use /routes instead of /flight to display arrived flights  -->
 </header>
 <aside>
@@ -24,30 +25,32 @@
     </form>
 </aside>
 <main>
-    <div class = "content">
+    <div class = "content" >
 
-    <div>
-        <h3 class="inline" id="flight"></h3> <!-- append airline_name with flight_number-->
-        <img class="inline" id="logo" src="" height="75">
-        <h3 id="fltcode"></h3> <!-- Append flight_icao with flight_iata -->
+    <div class = "nameLogo">
+        <h2 class="inline" id="flight"></h2> <!-- append airline_name with flight_number-->
+        <img class="inline" id="logo" src="">
     </div>
+        <h3 id="fltcode"></h3> <!-- Append flight_icao with flight_iata -->
 
-    <div>
+        
+
+    <div class = "status">
         <h3 class = "inline">Status: </h3>
         <p class = "inline" id="status">-</p>
     </div>
 
-    <div>
+    <div class = "date">
         <h3 class = "inline">Date: </h3>
         <p class = "inline" id="date">-</p>
     </div>
 
-    <div>
+    <div class = "route">
         <h3 class = "inline">Route: </h3>
         <p class = "inline" id="dptapt">-</p>
         <p class = "inline" id="arrapt"></p>
 
-    <div>
+    <div class = "gate">
         <h3 class = "inline">Departure Gate: </h3>
         <p class = "inline" id="dptgate">-</p>
         <h3 class = "inline">Arrival Gate: </h3>
@@ -60,26 +63,26 @@
         <thead>
             <tr>
                 <th></th>
-                <th>Gate Departure</th>
-                <th>Gate Arrival</th>
+                <th id = "title">Gate Departure</th>
+                <th id = "title">Gate Arrival</th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Scheduled</td>
+                <td id = "side">Scheduled</td>
                 <td id = "schdpt">-</td>
                 <td id = "scharr">-</td>
             </tr>
             <tr>
                 <!-- Use some colors/symbols here for delays etc.-->
-                <td>Actual</td>
+                <td id = "side">Actual</td>
                 <td id = "accdpt">-</td> <!-- Actual Dpt -->
                 <td id = "accarr">-</td> <!-- Actual Arr-->
             </tr>
             <tr>
                 <!-- Use some colors/symbols here for delays etc.-->
-                <td>Estimated</td>
+                <td id = "side">Estimated</td>
                 <td id = "estdpt">-</td> <!-- Est Dpt = Actual Dpt-->
                 <td id = "estarr">-</td> <!-- Est Arr = Actual Arr-->
                 <td id = "calculated"></td> <!-- This variable needs to be calculated-->
@@ -96,22 +99,22 @@
 
         <thead>
             <tr>
-                <th>Aircraft Type</th>
+                <th id = "side">Aircraft Type</th>
                 <td id = "aircraft">-</td>
                 <th></th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Current Speed</td>
+                <td id = "side">Current Speed</td>
                 <td id = "speed">-</td> <!-- append kph -->
             </tr>
             <tr>
-                <td>Current Altitude</td>
+                <td id = "side">Current Altitude</td>
                 <td id = "altitude">-</td> <!-- append ft -->
             </tr>
             <tr>
-                <td>Current Heading</td>
+                <td id = "side">Current Heading</td>
                 <td id = "heading">-</td> <!-- append deg -->
             </tr>
         </tbody>

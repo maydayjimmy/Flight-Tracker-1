@@ -1,6 +1,8 @@
 // IIFE - immediately invoked function expresion (all variables are local)
 $(function() {
 
+document.querySelector('.content').style.visibility = 'hidden'
+
 // Confirm JS is linked
 console.log("js is working")
 
@@ -85,6 +87,8 @@ $form.on("submit", createURL)
 
             // if successful ajax, calls displayData function
             console.log("displays")
+            document.querySelector('.content').style.visibility = 'visible'
+
             displayData(data)
 
         }, ( error ) => {
@@ -188,7 +192,7 @@ $form.on("submit", createURL)
         
             // show dep airport and arr airport details
             $dptapt.text(`${data.response.dep_name} (${data.response.dep_icao}) - ${data.response.dep_city}, ${data.response.dep_country}`)
-            $arrapt.text(`---------> ${data.response.arr_name} (${data.response.arr_icao}) - ${data.response.arr_city}, ${data.response.arr_country}`)
+            $arrapt.text(`--> ${data.response.arr_name} (${data.response.arr_icao}) - ${data.response.arr_city}, ${data.response.arr_country}`)
 
             // show dep and arr gate/terminal details
             // Check if gate/terminal values are null, then display them based which are defined

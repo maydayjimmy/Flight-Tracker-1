@@ -8,11 +8,11 @@ Provides key flight information and calculates if the flight is early, on-time, 
 * CSS3
 * JavaScript
 * jQuery
+* Google Fonts
 * AirLabs.co API
 
 ### Screenshots
-Insert Screenshot Here
-! [Screenshot] ()
+! [Screenshot] (./pics/ss1.png)
 
 ### Getting Started
 Enter your flight's airline (IATA code) and flight number in the search box and click "Check Flight Status" to view flight details.
